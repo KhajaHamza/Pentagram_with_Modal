@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     // For now, we'll just echo back the text
     console.log(text);
 
-    const url = new URL("https://khajahamza--sd-demo-model-generate.modal.run/")
+    const url = process.env.API_URL
 
     url.searchParams.set("prompt",text)
 
