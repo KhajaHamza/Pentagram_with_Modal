@@ -4,6 +4,9 @@ from fastapi import Response,HTTPException,Query,Request
 from datetime import datetime,timezone
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def download_model():
@@ -69,9 +72,10 @@ class Model:
     schedule=modal.Cron("*/5 * * * *"),
     secrets=[modal.Secret.from_name("API_KEY")]
 )
+
 def keep_warm():
-    health_url="https://khajahamza--sd-demo-model-health.modal.run"
-    generate_url="https://khajahamza--sd-demo-model-generate.modal.run"
+    health_url = os.getenv("HEALTH_URL")
+    generate_url = os.getenv("GENERATE_URL")
 
     #First check health endpoint(no API Key needed)
     health_response=requests.get(health_url)
