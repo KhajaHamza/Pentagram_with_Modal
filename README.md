@@ -74,9 +74,8 @@ python -m modal setup
 - Always activate your virtual environment before working with Modal
 - Keep your Modal token secure
 - Make sure both frontend and backend are running for full functionality
+- Use Your GPU Credits Wisely
 
 ## Contributing
 Feel free to open issues and submit pull requests.
 
-## License
-[Add your license here]
