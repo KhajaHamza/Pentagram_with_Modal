@@ -13,7 +13,7 @@ git clone https://github.com/KhajaHamza/Pentagram_with_Modal.git
 
 2. Navigate to the project directory:
 ```bash
-cd pentagram
+cd Pentagram_with_Modal
 ```
 
 3. Install dependencies:
